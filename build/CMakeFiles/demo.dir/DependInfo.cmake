@@ -4,7 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/demo.cc" "/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/CMakeFiles/demo.dir/demo.cc.o"
+  "/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/test.cc" "/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/CMakeFiles/demo.dir/test.cc.o"
+  "/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/train.cc" "/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/CMakeFiles/demo.dir/train.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

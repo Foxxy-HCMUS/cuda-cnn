@@ -128,22 +128,9 @@ src/CMakeFiles/MiniDNNLib.dir/layer/conv.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MiniDNNLib.dir/layer/conv.cc.s"
 	cd /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/src/layer/conv.cc -o CMakeFiles/MiniDNNLib.dir/layer/conv.cc.s
 
-src/CMakeFiles/MiniDNNLib.dir/layer/conv_gpu.cu.o: src/CMakeFiles/MiniDNNLib.dir/flags.make
-src/CMakeFiles/MiniDNNLib.dir/layer/conv_gpu.cu.o: ../src/layer/conv_gpu.cu
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CUDA object src/CMakeFiles/MiniDNNLib.dir/layer/conv_gpu.cu.o"
-	cd /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/src && /space/hotel/phit/.local/cuda-11.6/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -x cu -c /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/src/layer/conv_gpu.cu -o CMakeFiles/MiniDNNLib.dir/layer/conv_gpu.cu.o
-
-src/CMakeFiles/MiniDNNLib.dir/layer/conv_gpu.cu.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/MiniDNNLib.dir/layer/conv_gpu.cu.i"
-	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
-
-src/CMakeFiles/MiniDNNLib.dir/layer/conv_gpu.cu.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CUDA source to assembly CMakeFiles/MiniDNNLib.dir/layer/conv_gpu.cu.s"
-	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
-
 src/CMakeFiles/MiniDNNLib.dir/layer/fully_connected.cc.o: src/CMakeFiles/MiniDNNLib.dir/flags.make
 src/CMakeFiles/MiniDNNLib.dir/layer/fully_connected.cc.o: ../src/layer/fully_connected.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/MiniDNNLib.dir/layer/fully_connected.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/MiniDNNLib.dir/layer/fully_connected.cc.o"
 	cd /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MiniDNNLib.dir/layer/fully_connected.cc.o -c /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/src/layer/fully_connected.cc
 
 src/CMakeFiles/MiniDNNLib.dir/layer/fully_connected.cc.i: cmake_force
@@ -156,7 +143,7 @@ src/CMakeFiles/MiniDNNLib.dir/layer/fully_connected.cc.s: cmake_force
 
 src/CMakeFiles/MiniDNNLib.dir/layer/max_pooling.cc.o: src/CMakeFiles/MiniDNNLib.dir/flags.make
 src/CMakeFiles/MiniDNNLib.dir/layer/max_pooling.cc.o: ../src/layer/max_pooling.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/MiniDNNLib.dir/layer/max_pooling.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/MiniDNNLib.dir/layer/max_pooling.cc.o"
 	cd /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MiniDNNLib.dir/layer/max_pooling.cc.o -c /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/src/layer/max_pooling.cc
 
 src/CMakeFiles/MiniDNNLib.dir/layer/max_pooling.cc.i: cmake_force
@@ -169,7 +156,7 @@ src/CMakeFiles/MiniDNNLib.dir/layer/max_pooling.cc.s: cmake_force
 
 src/CMakeFiles/MiniDNNLib.dir/layer/relu.cc.o: src/CMakeFiles/MiniDNNLib.dir/flags.make
 src/CMakeFiles/MiniDNNLib.dir/layer/relu.cc.o: ../src/layer/relu.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/MiniDNNLib.dir/layer/relu.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/MiniDNNLib.dir/layer/relu.cc.o"
 	cd /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MiniDNNLib.dir/layer/relu.cc.o -c /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/src/layer/relu.cc
 
 src/CMakeFiles/MiniDNNLib.dir/layer/relu.cc.i: cmake_force
@@ -182,7 +169,7 @@ src/CMakeFiles/MiniDNNLib.dir/layer/relu.cc.s: cmake_force
 
 src/CMakeFiles/MiniDNNLib.dir/layer/sigmoid.cc.o: src/CMakeFiles/MiniDNNLib.dir/flags.make
 src/CMakeFiles/MiniDNNLib.dir/layer/sigmoid.cc.o: ../src/layer/sigmoid.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/MiniDNNLib.dir/layer/sigmoid.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/MiniDNNLib.dir/layer/sigmoid.cc.o"
 	cd /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MiniDNNLib.dir/layer/sigmoid.cc.o -c /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/src/layer/sigmoid.cc
 
 src/CMakeFiles/MiniDNNLib.dir/layer/sigmoid.cc.i: cmake_force
@@ -195,7 +182,7 @@ src/CMakeFiles/MiniDNNLib.dir/layer/sigmoid.cc.s: cmake_force
 
 src/CMakeFiles/MiniDNNLib.dir/layer/softmax.cc.o: src/CMakeFiles/MiniDNNLib.dir/flags.make
 src/CMakeFiles/MiniDNNLib.dir/layer/softmax.cc.o: ../src/layer/softmax.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/MiniDNNLib.dir/layer/softmax.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/MiniDNNLib.dir/layer/softmax.cc.o"
 	cd /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MiniDNNLib.dir/layer/softmax.cc.o -c /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/src/layer/softmax.cc
 
 src/CMakeFiles/MiniDNNLib.dir/layer/softmax.cc.i: cmake_force
@@ -208,7 +195,7 @@ src/CMakeFiles/MiniDNNLib.dir/layer/softmax.cc.s: cmake_force
 
 src/CMakeFiles/MiniDNNLib.dir/loss/cross_entropy_loss.cc.o: src/CMakeFiles/MiniDNNLib.dir/flags.make
 src/CMakeFiles/MiniDNNLib.dir/loss/cross_entropy_loss.cc.o: ../src/loss/cross_entropy_loss.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/MiniDNNLib.dir/loss/cross_entropy_loss.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/MiniDNNLib.dir/loss/cross_entropy_loss.cc.o"
 	cd /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MiniDNNLib.dir/loss/cross_entropy_loss.cc.o -c /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/src/loss/cross_entropy_loss.cc
 
 src/CMakeFiles/MiniDNNLib.dir/loss/cross_entropy_loss.cc.i: cmake_force
@@ -221,7 +208,7 @@ src/CMakeFiles/MiniDNNLib.dir/loss/cross_entropy_loss.cc.s: cmake_force
 
 src/CMakeFiles/MiniDNNLib.dir/loss/mse_loss.cc.o: src/CMakeFiles/MiniDNNLib.dir/flags.make
 src/CMakeFiles/MiniDNNLib.dir/loss/mse_loss.cc.o: ../src/loss/mse_loss.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/MiniDNNLib.dir/loss/mse_loss.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/MiniDNNLib.dir/loss/mse_loss.cc.o"
 	cd /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MiniDNNLib.dir/loss/mse_loss.cc.o -c /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/src/loss/mse_loss.cc
 
 src/CMakeFiles/MiniDNNLib.dir/loss/mse_loss.cc.i: cmake_force
@@ -234,7 +221,7 @@ src/CMakeFiles/MiniDNNLib.dir/loss/mse_loss.cc.s: cmake_force
 
 src/CMakeFiles/MiniDNNLib.dir/optimizer/sgd.cc.o: src/CMakeFiles/MiniDNNLib.dir/flags.make
 src/CMakeFiles/MiniDNNLib.dir/optimizer/sgd.cc.o: ../src/optimizer/sgd.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/MiniDNNLib.dir/optimizer/sgd.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/MiniDNNLib.dir/optimizer/sgd.cc.o"
 	cd /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MiniDNNLib.dir/optimizer/sgd.cc.o -c /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/src/optimizer/sgd.cc
 
 src/CMakeFiles/MiniDNNLib.dir/optimizer/sgd.cc.i: cmake_force
@@ -251,7 +238,6 @@ MiniDNNLib_OBJECTS = \
 "CMakeFiles/MiniDNNLib.dir/network.cc.o" \
 "CMakeFiles/MiniDNNLib.dir/layer/ave_pooling.cc.o" \
 "CMakeFiles/MiniDNNLib.dir/layer/conv.cc.o" \
-"CMakeFiles/MiniDNNLib.dir/layer/conv_gpu.cu.o" \
 "CMakeFiles/MiniDNNLib.dir/layer/fully_connected.cc.o" \
 "CMakeFiles/MiniDNNLib.dir/layer/max_pooling.cc.o" \
 "CMakeFiles/MiniDNNLib.dir/layer/relu.cc.o" \
@@ -268,7 +254,6 @@ src/libMiniDNNLib.a: src/CMakeFiles/MiniDNNLib.dir/mnist.cc.o
 src/libMiniDNNLib.a: src/CMakeFiles/MiniDNNLib.dir/network.cc.o
 src/libMiniDNNLib.a: src/CMakeFiles/MiniDNNLib.dir/layer/ave_pooling.cc.o
 src/libMiniDNNLib.a: src/CMakeFiles/MiniDNNLib.dir/layer/conv.cc.o
-src/libMiniDNNLib.a: src/CMakeFiles/MiniDNNLib.dir/layer/conv_gpu.cu.o
 src/libMiniDNNLib.a: src/CMakeFiles/MiniDNNLib.dir/layer/fully_connected.cc.o
 src/libMiniDNNLib.a: src/CMakeFiles/MiniDNNLib.dir/layer/max_pooling.cc.o
 src/libMiniDNNLib.a: src/CMakeFiles/MiniDNNLib.dir/layer/relu.cc.o
@@ -279,7 +264,7 @@ src/libMiniDNNLib.a: src/CMakeFiles/MiniDNNLib.dir/loss/mse_loss.cc.o
 src/libMiniDNNLib.a: src/CMakeFiles/MiniDNNLib.dir/optimizer/sgd.cc.o
 src/libMiniDNNLib.a: src/CMakeFiles/MiniDNNLib.dir/build.make
 src/libMiniDNNLib.a: src/CMakeFiles/MiniDNNLib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX static library libMiniDNNLib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX static library libMiniDNNLib.a"
 	cd /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/src && $(CMAKE_COMMAND) -P CMakeFiles/MiniDNNLib.dir/cmake_clean_target.cmake
 	cd /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MiniDNNLib.dir/link.txt --verbose=$(VERBOSE)
 

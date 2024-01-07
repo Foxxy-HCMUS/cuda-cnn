@@ -1,18 +1,8 @@
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CUDA"
   "CXX"
   )
 # The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CUDA
-  "/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/src/layer/conv_gpu.cu" "/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/src/CMakeFiles/MiniDNNLib.dir/layer/conv_gpu.cu.o"
-  )
-set(CMAKE_CUDA_COMPILER_ID "NVIDIA")
-
-# The include file search paths:
-set(CMAKE_CUDA_TARGET_INCLUDE_PATH
-  "../third_party/eigen-3.4.0"
-  )
 set(CMAKE_DEPENDS_CHECK_CXX
   "/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/src/layer/ave_pooling.cc" "/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/src/CMakeFiles/MiniDNNLib.dir/layer/ave_pooling.cc.o"
   "/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/src/layer/conv.cc" "/space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build/src/CMakeFiles/MiniDNNLib.dir/layer/conv.cc.o"

@@ -155,32 +155,59 @@ MiniDNNLib/fast:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/MiniDNNLib.dir/build.make src/CMakeFiles/MiniDNNLib.dir/build
 .PHONY : MiniDNNLib/fast
 
-demo.o: demo.cc.o
+test.o: test.cc.o
 
-.PHONY : demo.o
+.PHONY : test.o
 
 # target to build an object file
-demo.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/demo.cc.o
-.PHONY : demo.cc.o
+test.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/test.cc.o
+.PHONY : test.cc.o
 
-demo.i: demo.cc.i
+test.i: test.cc.i
 
-.PHONY : demo.i
+.PHONY : test.i
 
 # target to preprocess a source file
-demo.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/demo.cc.i
-.PHONY : demo.cc.i
+test.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/test.cc.i
+.PHONY : test.cc.i
 
-demo.s: demo.cc.s
+test.s: test.cc.s
 
-.PHONY : demo.s
+.PHONY : test.s
 
 # target to generate assembly for a file
-demo.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/demo.cc.s
-.PHONY : demo.cc.s
+test.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/test.cc.s
+.PHONY : test.cc.s
+
+train.o: train.cc.o
+
+.PHONY : train.o
+
+# target to build an object file
+train.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/train.cc.o
+.PHONY : train.cc.o
+
+train.i: train.cc.i
+
+.PHONY : train.i
+
+# target to preprocess a source file
+train.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/train.cc.i
+.PHONY : train.cc.i
+
+train.s: train.cc.s
+
+.PHONY : train.s
+
+# target to generate assembly for a file
+train.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/train.cc.s
+.PHONY : train.cc.s
 
 # Help Target
 help:
@@ -192,9 +219,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... MiniDNNLib"
 	@echo "... demo"
-	@echo "... demo.o"
-	@echo "... demo.i"
-	@echo "... demo.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
+	@echo "... train.o"
+	@echo "... train.i"
+	@echo "... train.s"
 .PHONY : help
 
 

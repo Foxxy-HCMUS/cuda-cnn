@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MiniDNNLib.dir/layer/ave_pooling.cc.o"
   "CMakeFiles/MiniDNNLib.dir/layer/conv.cc.o"
-  "CMakeFiles/MiniDNNLib.dir/layer/conv_gpu.cu.o"
   "CMakeFiles/MiniDNNLib.dir/layer/fully_connected.cc.o"
   "CMakeFiles/MiniDNNLib.dir/layer/max_pooling.cc.o"
   "CMakeFiles/MiniDNNLib.dir/layer/relu.cc.o"
@@ -17,6 +16,6 @@ file(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang CUDA CXX)
+foreach(lang CXX)
   include(CMakeFiles/MiniDNNLib.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

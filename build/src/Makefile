@@ -198,33 +198,6 @@ layer/conv.cc.s:
 	cd /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MiniDNNLib.dir/build.make src/CMakeFiles/MiniDNNLib.dir/layer/conv.cc.s
 .PHONY : layer/conv.cc.s
 
-layer/conv_gpu.o: layer/conv_gpu.cu.o
-
-.PHONY : layer/conv_gpu.o
-
-# target to build an object file
-layer/conv_gpu.cu.o:
-	cd /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MiniDNNLib.dir/build.make src/CMakeFiles/MiniDNNLib.dir/layer/conv_gpu.cu.o
-.PHONY : layer/conv_gpu.cu.o
-
-layer/conv_gpu.i: layer/conv_gpu.cu.i
-
-.PHONY : layer/conv_gpu.i
-
-# target to preprocess a source file
-layer/conv_gpu.cu.i:
-	cd /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MiniDNNLib.dir/build.make src/CMakeFiles/MiniDNNLib.dir/layer/conv_gpu.cu.i
-.PHONY : layer/conv_gpu.cu.i
-
-layer/conv_gpu.s: layer/conv_gpu.cu.s
-
-.PHONY : layer/conv_gpu.s
-
-# target to generate assembly for a file
-layer/conv_gpu.cu.s:
-	cd /space/hotel/phit/personal/ParallelProgramming/mini-dnn-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MiniDNNLib.dir/build.make src/CMakeFiles/MiniDNNLib.dir/layer/conv_gpu.cu.s
-.PHONY : layer/conv_gpu.cu.s
-
 layer/fully_connected.o: layer/fully_connected.cc.o
 
 .PHONY : layer/fully_connected.o
@@ -510,9 +483,6 @@ help:
 	@echo "... layer/conv.o"
 	@echo "... layer/conv.i"
 	@echo "... layer/conv.s"
-	@echo "... layer/conv_gpu.o"
-	@echo "... layer/conv_gpu.i"
-	@echo "... layer/conv_gpu.s"
 	@echo "... layer/fully_connected.o"
 	@echo "... layer/fully_connected.i"
 	@echo "... layer/fully_connected.s"

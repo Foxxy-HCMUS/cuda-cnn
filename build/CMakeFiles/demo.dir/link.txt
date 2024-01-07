@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/demo.dir/demo.cc.o -o demo   -L/space/hotel/phit/.local/cuda-11.6/targets/x86_64-linux/lib/stubs  -L/space/hotel/phit/.local/cuda-11.6/targets/x86_64-linux/lib  src/libMiniDNNLib.a /space/hotel/phit/.local/cuda-11.6/lib64/libcudart_static.a -ldl /usr/lib/x86_64-linux-gnu/librt.so -lpthread -lcudadevrt -lcudart_static -lrt -lpthread -ldl 
+/usr/bin/c++ CMakeFiles/demo.dir/test.cc.o CMakeFiles/demo.dir/train.cc.o -o demo  src/libMiniDNNLib.a /space/hotel/phit/.local/cuda-11.6/lib64/libcudart_static.a -ldl /usr/lib/x86_64-linux-gnu/librt.so -lpthread 
