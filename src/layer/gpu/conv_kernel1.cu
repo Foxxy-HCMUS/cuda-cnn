@@ -9,6 +9,18 @@ __global__ void conv_forward_kernel1(float *d_output, const float *d_input, cons
 {
     const int height_out = height_in - height_kernel + 1;
     const int width_out = width_in - height_kernel + 1;
+
+    // An example use of these macros:
+    // float a = y4d(0,0,0,0)
+    // y4d(0,0,0,0) = a
+#define y4d(i3, i2, i1, i0) d_output[(i3) * (channel_out * height_out * width_out) + (i2) * (height_out * width_out) + (i1) * (width_out) + i0]
+#define x4d(i3, i2, i1, i0) d_input[(i3) * (channel_in * height_in * width_in) + (i2) * (height_in * width_in) + (i1) * (width_in) + i0]
+#define k4d(i3, i2, i1, i0) d_weight[(i3) * (channel_in * height_kernel * height_kernel) + (i2) * (height_kernel * height_kernel) + (i1) * (height_kernel) + i0]
+
+    // Declare shared memory for input and weight tiles
+    __shared__ float ds_input[TILE_WIDTH][TILE_WIDTH];
+    __shared__ float ds_weight[TILE_WIDTH][TILE_WIDTH];
+
     int height_grid = ceil(1.0*height_out / TILE_WIDTH);
     int width_grid = ceil(1.0*width_out / TILE_WIDTH); 
     
@@ -21,49 +33,29 @@ __global__ void conv_forward_kernel1(float *d_output, const float *d_input, cons
 
     if (h < height_out && w < width_out) 
     {
-        // Shared memory for input and weight
-        __shared__ float input_shared[TILE_WIDTH + height_kernel - 1][TILE_WIDTH + height_kernel - 1];
-        __shared__ float weight_shared[height_kernel][height_kernel];
-
-        // Load input data into shared memory
-        int input_row = threadIdx.y;
-        int input_col = threadIdx.x;
-        int input_channel = threadIdx.z;
-        int input_global_row = (blockIdx.z / width_grid) * TILE_WIDTH + input_row;
-        int input_global_col = (blockIdx.z % width_grid) * TILE_WIDTH + input_col;
-        if (input_global_row < height_in && input_global_col < width_in)
+        for(int c=0; c<channel_in; c++)             // sum over all input features
         {
-            input_shared[input_row][input_col] = x4d(b, input_channel, input_global_row, input_global_col);
-        }
-        else
-        {
-            input_shared[input_row][input_col] = 0.0f;
-        }
+            // Load input and weight tiles into shared memory
+            ds_input[threadIdx.y][threadIdx.x] = x4d(b, c, h, w);
+            ds_weight[threadIdx.y][threadIdx.x] = k4d(m, c, threadIdx.y, threadIdx.x);
 
-        // Load weight data into shared memory
-        int weight_row = threadIdx.y;
-        int weight_col = threadIdx.x;
-        if (weight_row < height_kernel && weight_col < height_kernel)
-        {
-            weight_shared[weight_row][weight_col] = k4d(m, input_channel, weight_row, weight_col);
+            // Synchronize threads to ensure shared memory is loaded
+            __syncthreads();
+
+            // Compute convolution using shared memory
+            for(int p=0; p<height_kernel; p++)         // KxK filter 
+                for(int q=0; q<height_kernel; q++)
+                    accum += ds_input[threadIdx.y + p][threadIdx.x + q] * ds_weight[p][q];
+
+            // Synchronize threads to avoid memory hazards
+            __syncthreads();
         }
+        y4d(b,m,h,w) = accum;
+    } // endif (h < H_out && w < W_out)
 
-        __syncthreads();
-
-        // Compute convolution
-        for (int c = 0; c < channel_in; c++)             // sum over all input features
-        {
-            for (int p = 0; p < height_kernel; p++)         // KxK filter 
-            {
-                for (int q = 0; q < height_kernel; q++)
-                {
-                    accum += input_shared[input_row + p][input_col + q] * weight_shared[p][q];
-                }
-            }
-        }
-
-        y4d(b, m, h, w) = accum;
-    }
+    #undef y4d
+    #undef x4d
+    #undef k4d
 }
 
 void GPUInterface::conv_forward_gpu(
