@@ -75,7 +75,7 @@ void ConvGPU::forward(const Matrix &bottom)
   // Start layer timer
   GpuTimer timer;
   timer.Start();
-  gpuInterface.conv_forward_gpu(output_data, input_data, weight_data,
+  gpuInterface.conv_forward(output_data, input_data, weight_data,
                                   num_samples, output_channel, input_channel,
                                   height_in, width_in, kernel_height);
   

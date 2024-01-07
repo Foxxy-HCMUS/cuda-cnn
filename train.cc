@@ -80,7 +80,7 @@ int main() {
   // SGD opt(0.001); 
   const int n_epoch = 20;
   const int batch_size = 128;
-  std::string path = "./checkpoint/weights-4.bin";
+  std::string path = "./checkpoint/weights-5.bin";
 
  
   for (int epoch = 0; epoch < n_epoch; epoch ++) {

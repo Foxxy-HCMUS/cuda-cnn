@@ -9,7 +9,7 @@
 class GPUInterface {
  public:
   
-  void conv_forward_gpu(float *d_output, const float *d_input,
+  void conv_forward(float *d_output, const float *d_input,
                         const float *d_weight, const int n_sample,
                         const int channel_out, const int channel_in,
                         const int height_in, const int width_in,
