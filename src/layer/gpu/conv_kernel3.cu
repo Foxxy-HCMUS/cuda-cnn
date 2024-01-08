@@ -7,7 +7,7 @@
 
 #define TILE_WIDTH 16
 #define TILE_WIDTH_2 8
-#define K_COMMON 7
+#define K_COMMON 7 // 5
 #define C_LAYER1 1
 #define M_LAYER1 6
 #define C_LAYER2 6
@@ -38,20 +38,12 @@ __global__ void conv_forward_kernel_layer1(float *y, const float * __restrict__ 
 
     const int H_out = H - K + 1;
     const int W_out = W - K + 1;
-    // (void)H_out; // silence declared but never referenced warning. remove this line when you start working
-    // (void)W_out; // silence declared but never referenced warning. remove this line when you start working
-
-    // We have some nice #defs for you below to simplify indexing. Feel free to use them, or create your own.
-    // An example use of these macros:
-    // float a = y4d(0,0,0,0)
-    // y4d(0,0,0,0) = a
 
 #define y4d(i3, i2, i1, i0) y[(i3) * (M * H_out * W_out) + (i2) * (H_out * W_out) + (i1) * (W_out) + i0]
 #define x4d(i3, i2, i1, i0) x[(i3) * (C * H * W) + (i2) * (H * W) + (i1) * (W) + i0]
 #define k4d(i3, i2, i1, i0) k_layer1[(i3) * (C * K * K) + (i2) * (K * K) + (i1) * (K) + i0]
 #define loc_mem(i2, i1, i0) loc_mem1[(i2) * ((TILE_WIDTH+K_COMMON-1) * (TILE_WIDTH+K_COMMON-1)) + (i1) * (TILE_WIDTH+K_COMMON-1) + (i0)]
 
-    // Insert your GPU convolution kernel code here
     int b,m,h,w;
     b = blockIdx.x;
     m = blockIdx.y;
@@ -105,20 +97,12 @@ __global__ void conv_forward_kernel_layer2(float *y, const float * __restrict__ 
     */
     const int H_out = H - K + 1;
     const int W_out = W - K + 1;
-    // (void)H_out; // silence declared but never referenced warning. remove this line when you start working
-    // (void)W_out; // silence declared but never referenced warning. remove this line when you start working
-
-    // We have some nice #defs for you below to simplify indexing. Feel free to use them, or create your own.
-    // An example use of these macros:
-    // float a = y4d(0,0,0,0)
-    // y4d(0,0,0,0) = a
 
 #define y4d(i3, i2, i1, i0) y[(i3) * (M * H_out * W_out) + (i2) * (H_out * W_out) + (i1) * (W_out) + i0]
 #define x4d(i3, i2, i1, i0) x[(i3) * (C * H * W) + (i2) * (H * W) + (i1) * (W) + i0]
 #define k4d(i3, i2, i1, i0) k_layer2[(i3) * (C * K * K) + (i2) * (K * K) + (i1) * (K) + i0]
 #define loc_mem(i2, i1, i0) loc_mem2[(i2) * ((TILE_WIDTH_2+K-1) * (TILE_WIDTH_2+K-1)) + (i1) * (TILE_WIDTH_2+K-1) + (i0)]
 
-    // Insert your GPU convolution kernel code here
 
     int b,m,h,w;
     b = blockIdx.x;
