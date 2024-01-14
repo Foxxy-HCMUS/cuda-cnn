@@ -63,6 +63,11 @@ gpu_v3:
 	nvcc --compile src/layer/gpu/utils.cu -o src/layer/utils.o -I./ -L/usr/local/cuda/lib64 -lcudart 
 	nvcc -arch=sm_75 --compile src/layer/gpu/conv_kernel3.cu -o src/layer/conv_kernel3.o -I./ -L/usr/local/cuda/lib64 -lcudart 
 
+gpu_v4:
+# 	rm -f src/layer/conv_gpu.o
+# 	nvcc --compile src/layer/conv_gpu.cc -o src/layer/conv_gpu.o -I./ -L/usr/local/cuda/lib64 -lcudart
+	nvcc --compile src/layer/gpu/utils.cu -o src/layer/utils.o -I./ -L/usr/local/cuda/lib64 -lcudart 
+	nvcc -arch=sm_75 --compile src/layer/gpu/conv_kernel4.cu -o src/layer/conv_kernel4.o -I./ -L/usr/local/cuda/lib64 -lcudart 
 	
 
 loss: src/loss/cross_entropy_loss.cc src/loss/mse_loss.cc
